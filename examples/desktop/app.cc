@@ -113,7 +113,7 @@ void processInput(GLFWwindow *window)
         glfwSetWindowShouldClose(window, true);
 
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-        beautyValue++;
+        beautyValue += 0.2;
         if(beautyValue > 10.0) beautyValue = 10.0;
         beauty_face_filter_->setBlurAlpha(beautyValue/10);
     } 
@@ -126,7 +126,7 @@ void processInput(GLFWwindow *window)
 
 
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-        whithValue++;
+        whithValue += 0.2;
         if(whithValue > 10.0) whithValue = 10.0;
          beauty_face_filter_->setWhite(whithValue/20);
     }
@@ -138,7 +138,7 @@ void processInput(GLFWwindow *window)
     }
 
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-        thinFaceValue++;
+        thinFaceValue += 0.2;
         if(thinFaceValue > 10.0) thinFaceValue = 10.0;
          face_reshape_filter_->setFaceSlimLevel(thinFaceValue/200);
     }
@@ -150,7 +150,7 @@ void processInput(GLFWwindow *window)
     }
 
     if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS) {
-        bigeyeValue++;
+        bigeyeValue += 0.2;
         if(bigeyeValue > 10.0) bigeyeValue = 10.0;
          face_reshape_filter_->setEyeZoomLevel(bigeyeValue/100);
     }
@@ -162,7 +162,7 @@ void processInput(GLFWwindow *window)
     }
 
     if (glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS) {
-        lipstickValue++;
+        lipstickValue += 0.2;
         if(lipstickValue > 10.0) lipstickValue = 10.0;
 
         lipstick_filter_->setBlendLevel(lipstickValue/10); 
@@ -176,7 +176,7 @@ void processInput(GLFWwindow *window)
     }
 
     if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS) {
-        blusherValue++;
+        blusherValue += 0.2;
         if(blusherValue > 10.0) blusherValue = 10.0;
 
         blusher_filter_->setBlendLevel(blusherValue/10); 
